@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/bank.css}"/>
+    <title>Create Account</title>
+</head>
+<body>
+<h1>Create Your Account</h1>
+
+<form action="" method="post">
+    <div>
+        Full Name: <input th:field="${user.name}" th:required="required" type="text"/>
+    </div>
+    <div>
+        Username: <input th:field="${user.username}" th:required="required" type="text"/>
+    </div>
+    <div>
+        Password: <input th:field="${user.password}" th:required="required" type="password"/>
+    </div>
+    <div>
+        <input type="submit" value="Create Account"/>
+    </div>
+    <div>
+        <button onclick="location.href='/users'" type="button"> View Existing Users</button>
+    </div>
+</form>
+</body>
+</html>

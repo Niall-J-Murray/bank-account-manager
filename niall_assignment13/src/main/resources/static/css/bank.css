@@ -1,0 +1,59 @@
+
+body{
+  margin-left: 20px;
+}
+
+div {
+  width: 50%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 2px 5px;
+}
+
+table{
+  padding-left:8px;
+}
+
+label{
+  display:inline-block;
+  width:127px;
+  text-align:right;
+}
+
+input[type=text,password],
+select {
+  padding: 5px 5px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #034694;
+  color: white;
+  padding: 5px 5px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+button {
+  background-color: #034694;
+  color: white;
+  padding: 5px 5px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button[type=button]:hover {
+  background-color: #45a049;
+}
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/bank.css}"/>
+    <title>All Users</title>
+</head>
+<body>
+<h1>All Registered Users</h1>
+
+<div th:each="user : ${users}">
+    <span><a th:href="@{/user/{userId}(userId = ${user.userId})}" th:text="|Id: ${user.userId}|"></a></span><br/>
+    <span th:text="|Username: ${user.username}|"></span><br/>
+    <span th:text="|Name: ${user.name}|"></span><br/>
+    <span th:text="|Password: ${user.password}|"></span>
+    <div th:each="account : ${user.accounts}">
+        <span><a th:href="@{/user/{userId}/accounts/{accountId}(userId=${user.userId}, accountId=${account.accountId})}"
+                 th:text="${account.accountName}"></a></span>
+    </div>
+    <hr/>
+</div>
+<div>
+    <button onclick="location.href='/register'" type="button"> Register New User</button>
+</div>
+</body>
+</html>
